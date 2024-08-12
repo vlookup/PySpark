@@ -1,0 +1,16 @@
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder\
+    .master("local")\
+        .appName("test")\
+            .getOrCreate()
+
+data = [
+ ('James', '', 'Smith', '1991-04-01', 'M', 3000)              
+        ]
+
+columns = ["firstname", "middlename", "lastname", "dob", "gender", "salary"]
+
+df = spark.createDataFrame(data = data, schema = columns)
+
+print(df.printSchema())
