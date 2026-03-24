@@ -24,12 +24,5 @@ This example highlights:
 - **PySpark**
 - **Python 3.x**
 
----
-
-## 🧠 What the Script Does
-
-### **1. Creates a SparkSession**
-Runs Spark locally using:
-
 ```python
 spark = SparkSession.builder.master("local").appName("test").getOrCreate()
